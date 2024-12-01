@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import { Placeholder } from "react-bootstrap";
 import { FaSyncAlt } from "react-icons/fa"; // Importing the refresh icon from react-icons
 import { IoMdRefresh } from "react-icons/io";
+import { tableData } from "./consant";
 
 const SearchOption = () => {
   const [fromDate, setFromDate] = useState("");
@@ -11,153 +12,153 @@ const SearchOption = () => {
   const [mobileNumber, setMobileNumber] = useState("");
   const [registrationType, setRegistrationType] = useState(""); // Registration Type as select
 
-  const tableData = [
-    {
-      Sno: 1,
-      registrationDate: "26-11-2024",
-      trNo: "TR75688",
-      patientName: "AGRIMA ACHARYA",
-      age: 11,
-      gender: "Female",
-      mobileNo: "9008417784",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359488",
-    },
-    {
-      Sno: 2,
-      registrationDate: "25-11-2024",
-      trNo: "TR75687",
-      patientName: "GOPAL AGRAWAL",
-      age: 66,
-      gender: "Male",
-      mobileNo: "9412482257",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359487",
-    },
-    {
-      Sno: 3,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 4,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 5,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 6,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 7,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 8,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 9,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 10,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 11,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 12,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    // Add more entries here as needed
-  ];
+  // const tableData = [
+  //   {
+  //     Sno: 1,
+  //     registrationDate: "26-11-2024",
+  //     trNo: "TR75688",
+  //     patientName: "AGRIMA ACHARYA",
+  //     age: 11,
+  //     gender: "Female",
+  //     mobileNo: "9008417784",
+  //     document: "Sno Proof Document",
+  //     converted: "Converted",
+  //     crNo: "359488",
+  //   },
+  //   {
+  //     Sno: 2,
+  //     registrationDate: "25-11-2024",
+  //     trNo: "TR75687",
+  //     patientName: "GOPAL AGRAWAL",
+  //     age: 66,
+  //     gender: "Male",
+  //     mobileNo: "9412482257",
+  //     document: "Sno Proof Document",
+  //     converted: "Converted",
+  //     crNo: "359487",
+  //   },
+  //   {
+  //     Sno: 3,
+  //     registrationDate: "25-11-2024",
+  //     trNo: "TR75684",
+  //     patientName: "JYOTISH SINHA",
+  //     age: 65,
+  //     gender: "Male",
+  //     mobileNo: "9830559695",
+  //     document: "Sno Proof Document",
+  //     converted: "Converted",
+  //     crNo: "359486",
+  //   },
+  //   {
+  //     Sno: 4,
+  //     registrationDate: "25-11-2024",
+  //     trNo: "TR75684",
+  //     patientName: "JYOTISH SINHA",
+  //     age: 65,
+  //     gender: "Male",
+  //     mobileNo: "9830559695",
+  //     document: "Sno Proof Document",
+  //     converted: "Converted",
+  //     crNo: "359486",
+  //   },
+  //   {
+  //     Sno: 5,
+  //     registrationDate: "25-11-2024",
+  //     trNo: "TR75684",
+  //     patientName: "JYOTISH SINHA",
+  //     age: 65,
+  //     gender: "Male",
+  //     mobileNo: "9830559695",
+  //     document: "Sno Proof Document",
+  //     converted: "Converted",
+  //     crNo: "359486",
+  //   },
+  //   {
+  //     Sno: 6,
+  //     registrationDate: "25-11-2024",
+  //     trNo: "TR75684",
+  //     patientName: "JYOTISH SINHA",
+  //     age: 65,
+  //     gender: "Male",
+  //     mobileNo: "9830559695",
+  //     document: "Sno Proof Document",
+  //     converted: "Converted",
+  //     crNo: "359486",
+  //   },
+  //   {
+  //     Sno: 7,
+  //     registrationDate: "25-11-2024",
+  //     trNo: "TR75684",
+  //     patientName: "JYOTISH SINHA",
+  //     age: 65,
+  //     gender: "Male",
+  //     mobileNo: "9830559695",
+  //     document: "Sno Proof Document",
+  //     converted: "Converted",
+  //     crNo: "359486",
+  //   },
+  //   {
+  //     Sno: 8,
+  //     registrationDate: "25-11-2024",
+  //     trNo: "TR75684",
+  //     patientName: "JYOTISH SINHA",
+  //     age: 65,
+  //     gender: "Male",
+  //     mobileNo: "9830559695",
+  //     document: "Sno Proof Document",
+  //     converted: "Converted",
+  //     crNo: "359486",
+  //   },
+  //   {
+  //     Sno: 9,
+  //     registrationDate: "25-11-2024",
+  //     trNo: "TR75684",
+  //     patientName: "JYOTISH SINHA",
+  //     age: 65,
+  //     gender: "Male",
+  //     mobileNo: "9830559695",
+  //     document: "Sno Proof Document",
+  //     converted: "Converted",
+  //     crNo: "359486",
+  //   },
+  //   {
+  //     Sno: 10,
+  //     registrationDate: "25-11-2024",
+  //     trNo: "TR75684",
+  //     patientName: "JYOTISH SINHA",
+  //     age: 65,
+  //     gender: "Male",
+  //     mobileNo: "9830559695",
+  //     document: "Sno Proof Document",
+  //     converted: "Converted",
+  //     crNo: "359486",
+  //   },
+  //   {
+  //     Sno: 11,
+  //     registrationDate: "25-11-2024",
+  //     trNo: "TR75684",
+  //     patientName: "JYOTISH SINHA",
+  //     age: 65,
+  //     gender: "Male",
+  //     mobileNo: "9830559695",
+  //     document: "Sno Proof Document",
+  //     converted: "Converted",
+  //     crNo: "359486",
+  //   },
+  //   {
+  //     Sno: 12,
+  //     registrationDate: "25-11-2024",
+  //     trNo: "TR75684",
+  //     patientName: "JYOTISH SINHA",
+  //     age: 65,
+  //     gender: "Male",
+  //     mobileNo: "9830559695",
+  //     document: "Sno Proof Document",
+  //     converted: "Converted",
+  //     crNo: "359486",
+  //   },
+  //   // Add more entries here as needed
+  // ];
   const [filteredData, setFilteredData] = useState(tableData);
 
   // Pagination state
@@ -295,48 +296,48 @@ const SearchOption = () => {
   };
 
   // Input fields configuration
-  const inputFields = [
+   const inputFields = [
     {
-      label: "From Date",
-      type: "date",
-      value: fromDate,
-      setter: setFromDate,
+        label: "From Date",
+        type: "date",
+        value: fromDate,
+        setter: setFromDate,
     },
     {
-      label: "To Date",
-      type: "date",
-      value: toDate,
-      setter: setToDate,
+        label: "To Date",
+        type: "date",
+        value: toDate,
+        setter: setToDate,
     },
     {
-      label: "Patient Name",
-      type: "text",
-      value: patientName,
-      setter: setPatientName,
-      Placeholder: "Patient Name",
+        label: "Patient Name",
+        type: "text",
+        value: patientName,
+        setter: setPatientName,
+        Placeholder: "Patient Name",
     },
     {
-      label: "TR No.",
-      type: "text",
-      value: trNo,
-      setter: setTrNo,
-      Placeholder: "TR No",
+        label: "TR No.",
+        type: "text",
+        value: trNo,
+        setter: setTrNo,
+        Placeholder: "TR No",
     },
     {
-      label: "Mobile No.",
-      type: "text",
-      value: mobileNumber,
-      setter: setMobileNumber,
-      Placeholder: "Mobile No.",
+        label: "Mobile No.",
+        type: "text",
+        value: mobileNumber,
+        setter: setMobileNumber,
+        Placeholder: "Mobile No.",
     },
     {
-      label: "Registration Type",
-      type: "select",
-      value: registrationType,
-      setter: setRegistrationType,
-      options: ["select", "New", "Existing"],
+        label: "Registration Type",
+        type: "select",
+        value: registrationType,
+        setter: setRegistrationType,
+        options: ["select", "New", "Existing"],
     },
-  ];
+];
 
   return (
     <section>
@@ -464,24 +465,59 @@ const SearchOption = () => {
             </table>
           </div>
           {/* Pagination */}
-          <div className="d-flex justify-content-center mt-3">
-            <button
-              className="btn  me-2"
-              style={{ backgroundColor: "#0AD8B5", color: "white" }}
-              onClick={handlePreviousPage}
-              disabled={currentPage === 1}
-            >
-              Previous
-            </button>
-            <button
-              className="btn "
-              style={{ backgroundColor: "#0AD8B5", color: "white" }}
-              onClick={handleNextPage}
-              disabled={currentPage === totalPages}
-            >
-              Next
-            </button>
-          </div>
+         {/* Pagination */}
+<div className="d-flex justify-content-center mt-3">
+  <button
+    className="btn me-2"
+    style={{ backgroundColor: "#0AD8B5", color: "white" }}
+    onClick={() => setCurrentPage(1)}
+    disabled={currentPage === 1}
+  >
+    &laquo;&laquo;
+  </button>
+  <button
+    className="btn me-2"
+    style={{ backgroundColor: "#0AD8B5", color: "white" }}
+    onClick={handlePreviousPage}
+    disabled={currentPage === 1}
+  >
+    &lsaquo;
+  </button>
+
+  {Array.from({ length: totalPages }, (_, index) => (
+    <button
+      key={index + 1}
+      className={`btn me-2 ${
+        currentPage === index + 1 ? "btn-primary" : ""
+      }`}
+      style={{
+        backgroundColor: currentPage === index + 1 ? "#0AD8B5" : "white",
+        color: currentPage === index + 1 ? "white" : "black",
+      }}
+      onClick={() => setCurrentPage(index + 1)}
+    >
+      {index + 1}
+    </button>
+  ))}
+
+  <button
+    className="btn me-2"
+    style={{ backgroundColor: "#0AD8B5", color: "white" }}
+    onClick={handleNextPage}
+    disabled={currentPage === totalPages}
+  >
+    &rsaquo;
+  </button>
+  <button
+    className="btn"
+    style={{ backgroundColor: "#0AD8B5", color: "white" }}
+    onClick={() => setCurrentPage(totalPages)}
+    disabled={currentPage === totalPages}
+  >
+    &raquo;&raquo;
+  </button>
+</div>
+
         </div>
         {/* Modal for Printing */}
         {showModal && selectedRow && (
